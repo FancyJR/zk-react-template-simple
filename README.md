@@ -36,65 +36,6 @@ yarn run build
 
 ```
 
-## 系统菜单激活状态
-> 系统菜单的激活状态根据url地址，自动判定
-
-- 如果是二级页面，不如添加页面，需要保持其父级页面菜单状态，菜单path需要写成`parentPath/+childPath`，使用`/+`作为分界，比如：
-```
-list页面：
-export const PAGE_ROUTE = '/example/users'
-
-list页面的添加按钮，跳转到添加页面，但是页面菜单选中状态要保持list页面状态
-
-export const PAGE_ROUTE = '/example/users/+add'
-```
-
-## 页面头部
-> 页面头部可以控制显示隐藏、修改标题、修改面包屑
-
-### 显示隐藏
-```
-componentWillMount() {
-    const {actions} = this.props;
-    actions.hidePageHeader();
-}
-
-```
-
-### 修改标题
-```
-componentWillMount() {
-    const {actions} = this.props;
-    actions.setPageTitle('自定义页面标题');
-}
-```
-
-### 自定义面包屑导航
-```
-componentWillMount() {
-    actions.setPageBreadcrumbs([
-        {
-            key: 'zidingyi',
-            path: '',
-            text: '自定义',
-            icon: 'fa-user',
-        },
-        {
-            key: 'mianbaoxie',
-            path: '',
-            text: '面包屑',
-            icon: 'fa-user',
-        },
-        {
-            key: 'daohang',
-            path: '',
-            text: '导航',
-            icon: 'fa-user',
-        },
-    ]);
-}
-```
-
 ## 页面写法
 > 为了简化开发，通过脚本自动生成部分代码，需要注意几个约定
 
