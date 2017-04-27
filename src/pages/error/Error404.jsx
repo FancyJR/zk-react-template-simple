@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
-import {Button} from 'antd';
-import {Link} from 'react-router';
 import {addClass, removeClass} from 'zk-react/utils';
-import error404 from './404.png';
 import './style.less';
 /**
  * 页面未找到分为两种情况：
@@ -47,21 +44,7 @@ export class LayoutComponent extends Component {
         }
         return (
             <div className="error-page">
-                <img src={error404} alt="404图片"/>
-                <p className="error-text">您访问的页面不存在...</p>
-                <Button
-                    type="primary"
-                    className="error-btn"
-                    onClick={this.props.router.goBack}
-                >
-                    返回上一级
-                </Button>
-                <Button
-                    type="primary"
-                    className="error-btn error-btn-right"
-                >
-                    <Link to="/">返回首页</Link>
-                </Button>
+                error 404
             </div>
         );
     }

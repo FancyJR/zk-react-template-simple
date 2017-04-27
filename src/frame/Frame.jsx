@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import {message} from 'antd';
 import {PubSubMsg} from 'zk-react';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 import './style.less';
+import * as message from '../commons/message';
 import handleErrorMessage from '../commons/handle-error-message';
 
 NProgress.configure({showSpinner: false});

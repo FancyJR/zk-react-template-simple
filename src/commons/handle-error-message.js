@@ -1,4 +1,4 @@
-import {message} from 'antd';
+import * as message from './message';
 
 export default function (error) {
     let msg = '操作失败';

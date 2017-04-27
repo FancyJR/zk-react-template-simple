@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import {message} from 'antd';
 import {
     isDev,
     configureStore,
@@ -14,6 +13,7 @@ import {
 } from 'zk-react';
 import './global.less';
 import handleErrorMessage from './commons/handle-error-message';
+import * as message from './commons/message';
 import actions from './redux/actions';
 import reducers from './redux/reducers';
 import * as Error404 from './pages/error/Error404';
